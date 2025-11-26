@@ -29,7 +29,7 @@ app.use(morgan('dev'));
 // ⭐ SWAGGER CONFIGURATION WITH JWT SUPPORT
 // -----------------------------------------
 const swaggerOptions = {
-  swaggerDefinition: {
+  definition: {
     openapi: '3.0.0',
     info: {
       title: 'Credit Score + UPI API',
@@ -38,12 +38,14 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: 'http://localhost:5000',
-        description: 'Local Development Server',
+        url: process.env.NODE_ENV === 'production'
+          ? 'https://credit-score-xnvu.onrender.com'
+          : 'http://localhost:5000',
+        description: process.env.NODE_ENV === 'production'
+          ? 'Production Server'
+          : 'Local Development Server',
       },
     ],
-
-    // 🔐 JWT Security Scheme
     components: {
       securitySchemes: {
         bearerAuth: {
@@ -54,9 +56,7 @@ const swaggerOptions = {
       },
     },
   },
-
-  // Route files containing Swagger comments
-  apis: ['./src/routes/*.ts'],
+  apis: ['./src/routes/*.ts'], // Path to your route files
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
