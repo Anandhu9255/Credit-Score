@@ -1,12 +1,12 @@
 {
   "name": "creditscore",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Credit Score + UPI API backend",
+  "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "start": "ts-node src/server.ts",  
-    "build": "tsc"                    
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -21,8 +21,7 @@
     "mongoose": "^7.4.1",
     "morgan": "^1.10.1",
     "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1",
-    "ts-node": "^10.9.2"               
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
@@ -32,6 +31,7 @@
     "@types/morgan": "^1.9.10",
     "@types/node": "^20.7.3",
     "@types/swagger-ui-express": "^4.1.8",
+    "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.2.2"
   }
