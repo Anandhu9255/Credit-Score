@@ -39,6 +39,8 @@ Zero Dependency: Built with 100% pure JavaScript for maximum performance and sec
 
 Event Optimization: Uses a single event listener to trigger the calculation, keeping the memory footprint low.
 
+---
+
 🙏 Acknowledgments
 Logic inspired by standard FICO/Credit Bureau scoring models.
 
