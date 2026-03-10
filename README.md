@@ -10,7 +10,7 @@ This application serves as a simplified credit assessment engine. It takes a use
 
 ---
 
-##🚀 Features
+#🚀 Features
 
 ✅ Logic & Evaluation Features
 
